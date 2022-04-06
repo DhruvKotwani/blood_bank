@@ -4,16 +4,16 @@
 {%load static%}
 <br><br>
 <div class="container">
-    <H4 class="text-center">Donor's Detail</H4><br>
+    <H4 class="text-center">DONOR DETAILS</H4><br>
     <table class="table table-light table-hover table-bordered table-striped">
-        <thead class="bg-dark">
+        <thead class="bg-info">
             <tr>
-                <th scope="col" style="color: rgb(192, 192, 192);">Name</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Photo</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Blood Group</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Address</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Contact</th>
-                <th style="color: rgb(192, 192, 192);">Action</th>
+                <th scope="col">Name</th>
+                <th scope="col">Profile</th>
+                <th scope="col">Blood Group</th>
+                <th scope="col">Address</th>
+                <th scope="col">Mobile</th>
+                <th class="text-right">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -25,9 +25,9 @@
                 <td>{{t.address}}</td>
                 <td>{{t.mobile}}</td>
                 
-                <td>
-                    <button class="btn btn-success btn-sm"><a  style="text-decoration: none;color: white;" href="{% url 'update-donor' t.id  %}">Edit</a> </button>
-                    <button class="btn btn-danger btn-sm"><a  style="text-decoration: none;color: white;" href="{% url 'delete-donor' t.id  %}">Delete</a> </button>
+                <td class="text-right">
+                    <button class="btn btn-primary badge-pill" style="width: 80px;"><a  style="text-decoration: none;color: white;" href="{% url 'update-donor' t.id  %}">EDIT</a> </button>
+                    <button class="btn btn-danger badge-pill" style="width: 80px;"><a  style="text-decoration: none;color: white;" href="{% url 'delete-donor' t.id  %}">DELETE</a> </button>
                 </td>
             </tr>
             {% endfor %}
@@ -37,5 +37,9 @@
     </table>
 </div>
 
-
+<!--
+developed By : sumit kumar
+facebook : fb.com/sumit.luv
+youtube : youtube.com/lazycoders
+-->
 {% endblock content %}

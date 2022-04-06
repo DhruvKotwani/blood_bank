@@ -15,7 +15,7 @@
       
         <div class="card card-5">
             <div class="card-heading">
-                <h2 class="title">Edit Patient's Detail</h2>
+                <h2 class="title">Update Patient</h2>
             </div>
             <div class="card-body">
                 <form method="POST" autocomplete="off" enctype="multipart/form-data">
@@ -73,8 +73,8 @@
                         <div class="value">
                             <div class="input-group">
                                 <div class="rs-select2 js-select-simple select--no-search">
-                                    <select name="bloodgroup" class="form-control">
-                                        <option disabled="disabled" selected="selected">Please Select</option>
+                                    <select name="bloodgroup">
+                                        <option disabled="disabled" selected="selected">Choose option</option>
                                         <option>O+</option>
                                         <option>O-</option>
                                         <option>A+</option>
@@ -118,7 +118,7 @@
                     </div>
 
                     <div class="form-row">
-                        <div class="name">Contact</div>
+                        <div class="name">Mobile</div>
                         <div class="value">
                             <div class="input-group">
                                 {% render_field patientForm.mobile|attr:'required:true'  class="input--style-5"  %}
@@ -138,7 +138,7 @@
 
 
                     <div>
-                        <button class="btn btn--radius-2 btn-primary btn-block" type="submit">Make Changes</button>
+                        <button class="btn btn--radius-2 btn-danger" type="submit">Update</button>
                     </div>
                 </form>
                 <br>
@@ -148,5 +148,9 @@
         </div>
     </div>
 </div>
-
+<!--
+developed By : sumit kumar
+facebook : fb.com/sumit.luv
+youtube : youtube.com/lazycoders
+-->
 {% endblock content %}

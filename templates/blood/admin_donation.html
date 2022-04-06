@@ -18,18 +18,18 @@
    </head>
 <br><br>
 <div class="container">
-    <H4 class="text-center">Blood Donation Details</H4><br>
+    <H4 class="text-center">BLOOD DONATION DETAILS</H4><br>
     <table class="table table-light table-hover table-bordered table-striped">
-        <thead class="bg-dark">
+        <thead class="bg-info">
             <tr>
-                <th scope="col" style="color: rgb(192, 192, 192);">Donor's Name</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Disease</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Age</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Blood Group</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Unit</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Request Date</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Status</th>
-                <th style="color: rgb(192, 192, 192);">Action</th>
+                <th scope="col">Donor Name</th>
+                <th scope="col">Disease</th>
+                <th scope="col">Age</th>
+                <th scope="col">Blood Group</th>
+                <th scope="col">Unit</th>
+                <th scope="col">Request Date</th>
+                <th scope="col">Status</th>
+                <th class="text-right">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -43,12 +43,12 @@
                 <td>{{t.date}}</td>
                 <td>{{t.status}}</td>
                 {% if t.status == 'Pending' %}
-                <td>
-                    <button class="btn btn-success btn-sm"><a  style="text-decoration: none;color: white;" href="{% url 'approve-donation' t.id  %}"><i class="fa fa-check"></i> Approve</a> </button>
-                    <button class="btn btn-danger btn-sm"><a  style="text-decoration: none;color: white;" href="{% url 'reject-donation' t.id  %}"><i class="fa fa-times"></i> Reject</a> </button>
+                <td class="text-right">
+                    <button class="btn btn-primary badge-pill" style="width: 100px;"><a  style="text-decoration: none;color: white;" href="{% url 'approve-donation' t.id  %}">APPROVE</a> </button>
+                    <button class="btn btn-danger badge-pill" style="width: 80px;"><a  style="text-decoration: none;color: white;" href="{% url 'reject-donation' t.id  %}">REJECT</a> </button>
                 </td>
                 {% elif  t.status == 'Approved' %}
-                <td><span class="label success">{{t.unit}} Unit Added To Stock</span></td>
+                <td><span class="label warning">{{t.unit}} Unit Added To Stock</span></td>
 
                 {% else %}
                 <td><span class="label danger">0 Unit Added To Stock</span></td> 
@@ -60,6 +60,10 @@
     
     </table>
 </div>
-
+<!--
+developed By : sumit kumar
+facebook : fb.com/sumit.luv
+youtube : youtube.com/lazycoders
+-->
 
 {% endblock content %}

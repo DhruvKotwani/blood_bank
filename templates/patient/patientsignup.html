@@ -29,7 +29,7 @@
             <br><br><br>
             <div class="card card-5">
                 <div class="card-heading">
-                    <h2 class="title">Patient Registration</h2>
+                    <h2 class="title">Patient Signup</h2>
                 </div>
                 <div class="card-body">
                     <form method="POST" autocomplete="off" enctype="multipart/form-data">
@@ -87,8 +87,8 @@
                             <div class="value">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="bloodgroup" class="form-control">
-                                            <option disabled="disabled" selected="selected">Please Select</option>
+                                        <select name="bloodgroup">
+                                            <option disabled="disabled" selected="selected">Choose option</option>
                                             <option>O+</option>
                                             <option>O-</option>
                                             <option>A+</option>
@@ -114,7 +114,7 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="name">Doctor's Name</div>
+                            <div class="name">Doctor Name</div>
                             <div class="value">
                                 <div class="input-group">
                                     {% render_field patientForm.doctorname|attr:'required:true'  class="input--style-5"  %}
@@ -132,7 +132,7 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="name">Contact No.</div>
+                            <div class="name">Mobile</div>
                             <div class="value">
                                 <div class="input-group">
                                     {% render_field patientForm.mobile|attr:'required:true'  class="input--style-5"  %}
@@ -141,7 +141,7 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="name">Photo</div>
+                            <div class="name">Profile Pic</div>
                             <div class="value">
                                 <div class="input-group">
                                     {% render_field patientForm.profile_pic|attr:'required:true'  class="input--style-5"  %}
@@ -153,12 +153,12 @@
   
   
 
-                        <div class="text-center">
-                            <button class="btn btn--radius-2 btn-danger btn-block" type="submit">Register</button>
+                        <div>
+                            <button class="btn btn--radius-2 btn-danger" type="submit">Register</button>
                         </div>
                     </form>
                     <br>
-                    <p style="text-align: center;">Already have an account? <a style="text-decoration: none;" href="/patient/patientlogin">Login To Continue</a></p>
+                    <p style="text-align: center;">Already have an account ? <a style="text-decoration: none;" href="/patient/patientlogin">Click here to login</a></p>
 
                 </div>
             </div>
@@ -174,3 +174,8 @@
 
   </body>
 </html>
+<!--
+developed By : sumit kumar
+facebook : fb.com/sumit.luv
+youtube : youtube.com/lazycoders
+-->

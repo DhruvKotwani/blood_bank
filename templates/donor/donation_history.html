@@ -20,14 +20,14 @@
 <div class="container">
     <H4 class="text-center">My Donation History</H4><br>
     <table class="table table-light table-hover table-bordered table-striped">
-        <thead class="bg-dark">
+        <thead class="bg-info">
             <tr>
-                <th scope="col" style="color: rgb(192, 192, 192);">Donor's Age</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Disease (if any)</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Blood Group</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Unit</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Date</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Status</th>
+                <th scope="col">Donor Age</th>
+                <th scope="col">Disease (if any)</th>
+                <th scope="col">Blood Group</th>
+                <th scope="col">Unit</th>
+                <th scope="col">Date</th>
+                <th scope="col">Status</th>
                 
             </tr>
         </thead>
@@ -43,10 +43,10 @@
                 <td>{{t.unit}}</td>
                 <td>{{t.date}}</td>
                 {% if t.status == 'Approved' %}
-                <td><span class="label success"> Approved</span></td>
+                <td><span class="label warning"> Approved</span></td>
                 
                 {% elif t.status == 'Rejected' %}
-                <td><span class="label danger">Rejected</span></td>
+                <td><span class="label success">Rejected</span></td>
                 {% else %}
                 <td><span style="color: white;margin-left: 0px;" class="label info">Pending</span></td>
                 {% endif %}
@@ -60,5 +60,9 @@
     </table>
 </div>
 
-
+<!--
+developed By : sumit kumar
+facebook : fb.com/sumit.luv
+youtube : youtube.com/lazycoders
+-->
 {% endblock content %}

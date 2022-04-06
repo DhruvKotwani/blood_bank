@@ -12,17 +12,17 @@
 
 {% endif %}
     <table class="table table-light table-hover table-bordered table-striped">
-        <thead class="bg-dark">
+        <thead class="bg-info">
             <tr>
-                <th scope="col" style="color: rgb(192, 192, 192);">Patient's Name</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Age</th>
+                <th scope="col">Patient Name</th>
+                <th scope="col">Age</th>
                 
-                <th scope="col" style="color: rgb(192, 192, 192);">Reason</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Blood Group</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Unit (ml)</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Date</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Status</th>
-                <th style="color: rgb(192, 192, 192);">Action</th>
+                <th scope="col">Reason</th>
+                <th scope="col">Blood Group</th>
+                <th scope="col">Unit (in ml)</th>
+                <th scope="col">Date</th>
+                <th scope="col">Status</th>
+                <th class="text-right">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -39,10 +39,10 @@
                 <td>{{t.status}}</td>
                 
                 
-                <td>
+                <td class="text-right">
                    
-                    <button class="btn btn-success btn-sm"><a  style="text-decoration: none;color: white;" href="{% url 'update-approve-status' t.id  %}"><i class="fa fa-check"></i> Approve</a> </button>
-                    <button class="btn btn-danger btn-sm"><a  style="text-decoration: none;color: white;" href="{% url 'update-reject-status' t.id  %}"><i class="fa fa-times"></i> Reject</a> </button>
+                    <button class="btn btn-primary badge-pill" style="width: 100px;"><a  style="text-decoration: none;color: white;" href="{% url 'update-approve-status' t.id  %}">Approve</a> </button>
+                    <button class="btn btn-danger badge-pill" style="width: 80px;"><a  style="text-decoration: none;color: white;" href="{% url 'update-reject-status' t.id  %}">Reject</a> </button>
                     
                 </td>
             </tr>
@@ -52,13 +52,14 @@
     
     </table>
 {% else %}
-<div class="alert alert-danger" role="alert">
-    No Blood Request By Patient/Donor!
-  </div>
-
+<h5>No Blood Request By Patient / Donor !</h5>
 {% endif %}
 
 </div>
-
+<!--
+developed By : sumit kumar
+facebook : fb.com/sumit.luv
+youtube : youtube.com/lazycoders
+-->
 
 {% endblock content %}

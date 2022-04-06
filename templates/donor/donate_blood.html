@@ -26,8 +26,8 @@
                         <div class="value">
                             <div class="input-group">
                                 <div class="rs-select2 js-select-simple select--no-search">
-                                    <select name="bloodgroup" class="form-control">
-                                        <option disabled="disabled" selected="selected">Please Select</option>
+                                    <select name="bloodgroup">
+                                        <option disabled="disabled" selected="selected">Choose option</option>
                                         <option>O+</option>
                                         <option>O-</option>
                                         <option>A+</option>
@@ -44,7 +44,7 @@
                     </div>
 
                     <div class="form-row">
-                        <div class="name">Unit (ml)</div>
+                        <div class="name">Unit (in ml)</div>
                         <div class="value">
                             <div class="input-group">
                                 {% render_field donation_form.unit|attr:'required:true'  class="input--style-5"  %}
@@ -74,8 +74,8 @@
 
 
 
-                    <div class="text-center">
-                        <button class="btn btn--radius-2 btn-success" type="submit">DONATE</button>
+                    <div>
+                        <button class="btn btn--radius-2 btn-danger" type="submit">DONATE</button>
                     </div>
                 </form>
                 <br>
@@ -85,5 +85,9 @@
         </div>
     </div>
 </div>
-
+<!--
+developed By : sumit kumar
+facebook : fb.com/sumit.luv
+youtube : youtube.com/lazycoders
+-->
 {% endblock content %}

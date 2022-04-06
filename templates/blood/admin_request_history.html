@@ -25,17 +25,17 @@
 
 {% endif %}
     <table class="table table-light table-hover table-bordered table-striped">
-        <thead class="bg-dark">
+        <thead class="bg-info">
             <tr>
-                <th scope="col" style="color: rgb(192, 192, 192);">Patient Name</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Age</th>
+                <th scope="col">Patient Name</th>
+                <th scope="col">Age</th>
                 
-                <th scope="col" style="color: rgb(192, 192, 192);">Reason</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Blood Group</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Unit (ml)</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Date</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Status</th>
-                <th scope="col" style="color: rgb(192, 192, 192);">Stock Status</th>
+                <th scope="col">Reason</th>
+                <th scope="col">Blood Group</th>
+                <th scope="col">Unit (in ml)</th>
+                <th scope="col">Date</th>
+                <th scope="col">Status</th>
+                <th scope="col">Stock Status</th>
                
             </tr>
         </thead>
@@ -51,11 +51,11 @@
                 <td>{{t.unit}}</td>
                 <td>{{t.date}}</td>
                 {% if t.status == 'Approved' %}
-                <td><span class="label success"> Approved</span></td>
-                <td><span class="label success"> {{t.unit}} Unit Deducted From Stock</span></td>
+                <td><span class="label warning"> Approved</span></td>
+                <td><span class="label warning"> {{t.unit}} Unit Deducted From Stock</span></td>
                 {% else %}
-                <td><span class="label danger">Rejected</span></td>
-                <td><span class="label danger"> 0 Unit Deducted From Stock</span></td>
+                <td><span class="label success">Rejected</span></td>
+                <td><span class="label success"> 0 Unit Deducted From Stock</span></td>
                 {% endif %}
                 
                 
@@ -68,4 +68,9 @@
     </table>
 </div>
 
+<!--
+developed By : sumit kumar
+facebook : fb.com/sumit.luv
+youtube : youtube.com/lazycoders
+-->
 {% endblock content %}
